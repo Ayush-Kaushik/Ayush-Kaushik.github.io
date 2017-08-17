@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio | Ayush Kaushik</title>
+
+    <!-- scripts start -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script src="/javascripts/isotope.pkgd.min.js"></script>
+    <script src="/javascripts/packery-mode.pkgd.min.js"></script>
+    <script src="/javascripts/jquery.scrollme.min.js"></script>
+    <script src="/javascripts/anime.min.js"></script>
+    <script src="/javascripts/lazysizes.min.js"></script>
+    <script src="/javascripts/scripts.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- for navigation members -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <!-- for card flipping -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+
+    <style>
+
+        body,html {
+            margin:0;
+            padding:0;
+        }
+
+        .navigation{
+            background-color: #fff000;
+            height: 50%;
+            padding: 0;
+            width: 100%;
+        }
+
+        .navigation-content{
+            padding: 20px;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .navigation-content > a{
+            color: #000000;
+            font-weight: 100;
+            font-family: 'Press Start 2P', cursive;
+            text-decoration:  none;
+            font-size: 24px;
+            padding: 30px;
+            display: inline-block;
+        }
+
+        p{
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .introduction{
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+
+        .P1{
+            height: 200px;
+        }
+
+        .front{
+            text-align: center;
+            background-color: #fff000;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+        .back{
+            text-align: center;
+            background-color: black;
+            color: #ffffff;
+            box-shadow: 10px 10px 5px #888888;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- When user leaves the browser -->
+<script>
+    window.onblur = function() {
+        document.title = "Come Back Soon!";
+    };
+    window.onfocus = function() {
+        document.title = "Portfolio | Ayush Kaushik";
+    };
+</script>
+
+<div class="navigation">
+    <nav class="navigation-content">
+        <a href="#something">PROJECTS</a>
+        <a href="#something">TECHNICAL SKILLS</a>
+        <a href="#something">EDUCATION</a>
+        <a href="#something">RESUME</a>
+    </nav>
+</div>
+
+<div id="moving_text" class="introduction"></div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <script>
+    var text = 'Hi, I am Ayush! I\'m a software engineer.';
+
+    $.each(text.split(''), function(i, letter){
+        setTimeout(function(){
+            $('#moving_text').html($('#moving_text').html() + letter);
+
+        }, 100*i);
+    });
+   </script>
+<hr>
+
+
+
+<!-- PROJECTS -->
+<div class="projects container-fluid">
+    <p>Projects</p>
+
+<div class="row">
+    <div class="col-md-6">
+    <div class="P1" id="card">
+        <div class="front">
+            <p> Luhn Algorithm </p>
+        </div>
+
+        <div class="back">
+            <p> Small Introduction</p>
+            <p>Git-hub link</p>
+        </div>
+    </div>
+
+    <script>
+        $("#card").flip({
+            axis: 'x',
+            trigger: 'hover'
+        });
+    </script>
+    </div>
+
+
+    <!-- project 2 -->
+    <div class="col-sm-6">
+    <div class="P1" id="card2">
+        <div class="front">
+            <p>Medicine Tracker </p>
+        </div>
+
+        <div class="back">
+            <p> Small Introduction</p>
+            <p>Git-hub link</p>
+        </div>
+    </div>
+
+    <script>
+        $("#card2").flip({
+            axis: 'x',
+            trigger: 'hover'
+        });
+    </script>
+    </div>
+</div>
+
+
+
+    <div class="row">
+    <!-- project 3 -->
+        <div class="col-md-6"
+    <div class="P1" id="card3">
+        <div class="front">
+            <p>Car-Inventory System</p>
+        </div>
+
+        <div class="back">
+            <p> Small Introduction</p>
+            <p>Git-hub link</p>
+        </div>
+    </div>
+
+    <script>
+        $("#card3").flip({
+            axis: 'x',
+            trigger: 'hover'
+        });
+    </script>
+    </div>
+
+    <div class="col-md-6">
+    <!-- project 3 -->
+    <div class="P1" id="card4">
+        <div class="front">
+            <p>Luhn-algorithm</p>
+        </div>
+
+        <div class="back">
+            <p> Small Introduction</p>
+            <p>Git-hub link</p>
+        </div>
+    </div>
+
+    <script>
+        $("#card4").flip({
+            axis: 'x',
+            trigger: 'hover'
+        });
+    </script>
+    </div>
+
+
+</div>
+
+
+
+<div class="education">
+    Education and work experience
+
+    <div class="Education E1">
+        <p>Brampton Centennial School</p>
+    </div>
+
+    <div class="Education E2">
+        <p>University of Guelph</p>
+    </div>
+
+    <div class="Education E3">
+        <p> Inbox Marketer Development and Support co-op</p>
+    </div>
+</div>
+
+
+<div class="technical skills">
+    <div><!-- Small row in grey font will tell programming langauges --></div>
+    <div>Langauge 1</div>
+    <div>Language 2</div>
+    <div>Language 3</div>
+    <div>Language 4</div>
+    <div>Language 5</div>
+    <div>Language 6</div>
+    <div>Language 7</div>
+    <div>Language 8</div>
+    <div>Language 9</div>
+    <div>Language 10</div>
+    <div>Language 11</div>
+
+    <div> <!-- Small row with all the other stuff that I know --></div>
+    <div>1</div>
+    <div>2</div>
+</div>
+
+
+<div class="footer">
+    <footer>
+        <p>Create a small navigation bar here</p>
+        <p>Mention your name and github and linkedin link</p>
+    </footer>
+</div>
+
+
+</body>
+</html>
