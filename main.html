@@ -204,6 +204,58 @@
             transform: rotate(120deg);
         }
 
+        .gB-logo{
+            font-family: 'Press Start 2P', cursive;
+            font-size: 24px;
+            position: relative;
+            top: 50px;
+            left: 20px;
+        }
+        
+
+        /*---------- GAMEBOY SCREENS - CONSOLE ------------------*/
+        .screen-1 {
+            height:300px;
+            font-family: 'Press Start 2P', cursive;
+            background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+            background: rgba(204, 204, 204, 0.5);
+            position: relative;
+            bottom: 20px;
+        }
+
+        .screen-2{
+            height:300px;
+            font-family: 'Press Start 2P', cursive;
+            background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+            background: rgba(204, 204, 204, 0.5);
+            position: relative;
+            bottom: 20px;
+        }
+
+        .screen-3{
+            height:300px;
+            font-family: 'Press Start 2P', cursive;
+            background: rgb(181, 227, 134); /* Fallback for older browsers without RGBA-support */
+            position: relative;
+            bottom: 20px;
+        }
+
+        .screen-4{
+            height:300px;
+            font-family: 'Press Start 2P', cursive;
+            background: rgb(197, 144, 0); /* Fallback for older browsers without RGBA-support */
+            position: relative;
+            bottom: 20px;
+        }
+
+        .screen-5{
+            height:300px;
+            font-family: 'Press Start 2P', cursive;
+            background: rgb(164, 181, 168) /* Fallback for older browsers without RGBA-support */
+            position: relative;
+            bottom: 20px;
+        }
+
 
     </style>
 </head>
@@ -415,24 +467,34 @@
 
 
 <div class="technical_skills container-fluid">
-    <div class="row">
-        <div class="col-md-6"> Programming Languages <!-- Small row in grey font will tell programming languages --> </div>
-    </div>
-
-    <button type="button" class="btn btn-danger b-font b-shape">Danger</button>
-    <button type="button" class="btn btn-danger b-font b-shape">Danger</button>
-    <button type="button" class="btn btn-danger b-font b-shape">Danger</button>
-    <button type="button" class="btn btn-danger b-font b-shape">Danger</button>
-    <button type="button" class="btn btn-danger b-font b-shape">Danger</button>
-    <button type="button" class="btn btn-danger b-font b-shape">Danger</button>
-
     <div class="console-out">
         <div class="console-in">
             <div class = "console-screen">
-                CONSOLE SCREEN
+                <div class="screen-1">
+                    <h2>Welcome To Gameboy Uber-Advance</h2>
+                    <p> Click A/B button to switch between screens</p>
+                </div>
+                <div class="screen-2">
+                    <h2>Level 1: Programming Languages</h2>
+                    <p>A list of languages I have worked with</p>
+                </div>
+                <div class="screen-3">
+                    <h2>C</h2>
+                    <p>I have most extensive experience with C language.</p>
+                    <p>Some of my very first projects were made in C</p>
+                </div>
+                <div class="screen-4">
+                    <h2>Java</h2>
+                    <p>I created an inventory system with Swing and AWT library</p>
+                </div>
+                <div class="screen-5">
+                    <h2>PHP</h2>
+                    <p>I used Symfony framework to create a medicine tracker which keeps track of patient medication</p>
+                </div>
             </div>
-            <div>
-                LOGO
+
+            <div class="gB-logo">
+                GAMEBOY UBER-ADVANCE
             </div>
         </div>
 
@@ -440,8 +502,8 @@
             <button type="button" class="btn btn-primary gB-navigation-top"></button>
             <button type="button" class="btn btn-primary gB-navigation-bottom"></button>
 
-            <button type="button" class="btn btn-danger gB-shape"></button>
-            <button type="button" class="btn btn-danger gB-shape"></button>
+            <button type="button" class="btn btn-danger gB-shape" id="prev"></button>
+            <button type="button" class="btn btn-danger gB-shape" id="next"></button>
         </div>
 
         <div class="button-labels">
@@ -453,29 +515,42 @@
         </div>
     </div>
 
-
-
-
-
-    <div>Langauge 1</div>
-    <div>Language 2</div>
-    <div>Language 3</div>
-    <div>Language 4</div>
-    <div>Language 5</div>
-    <div>Language 6</div>
-    <div>Language 7</div>
-    <div>Language 8</div>
-    <div>Language 9</div>
-    <div>Language 10</div>
-    <div>Language 11</div>
-
-    <div class="row">
-        <div class="col-md-6"> Source Control <!-- Small row in grey font will tell programming langauges --> </div>
-    </div>
-
-    <div>1</div>
-    <div>2</div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $(".console-screen div").each(function(e) {
+            if (e != 0)
+                $(this).hide();
+        });
+
+        $("#next").click(function(){
+            if ($(".console-screen div:visible").next().length != 0)
+                $(".console-screen div:visible").fadeOut(function(){
+                    $(this).next().fadeIn();
+                });
+            else {
+                $(".console-screen div:visible").fadeOut(function(){
+                    $(".console-screen div:first").fadeIn();
+                });
+            }
+            return false;
+        });
+
+        $("#prev").click(function(){
+            if ($(".console-screen div:visible").prev().length != 0)
+                $(".console-screen div:visible").fadeOut(function(){
+                    $(this).prev().fadeIn();
+                });
+            else {
+                $(".console-screen div:visible").fadeOut(function(){
+                    $(".console-screen div:last").fadeIn();
+                });
+            }
+            return false;
+        });
+    });
+</script>
 
 
 <div class="footer">
