@@ -61,15 +61,12 @@
         
         .projects{
             background-image: url("sky.jpg");
-
+            background-size: 100%;
         }
-
 
         .P1{
             height: 200px;
             font-family: 'Press Start 2P', cursive;
-
-
         }
 
         .front{
@@ -87,11 +84,13 @@
         }
 
         .education{
+            width: 100%;
             padding:20px;
             background-image: url("contra.jpg");
         }
 
         .technical_skills{
+            width: 100%;
             background-image: url("street_fighter.jpg");
         }
 
@@ -114,10 +113,12 @@
             border: 1px solid black;
             position: relative;
             left: 20%;
-            height: 900px;
-            width: 800px;
+            height: 750px;
+            width: 750px;
             position: relative;
             box-shadow: 20px 20px 2px #888888;
+
+            overflow: hidden;
         }
 
         .console-in{
@@ -128,25 +129,27 @@
             border-top-left-radius: 25px;
             border-bottom-left-radius:25%;
             border-bottom-right-radius:25%;
-            top: 50px;
+            top: 30px;
             width: 80%;
-            height: 500px;
+            height: 400px;
             left: 10%;
             background-color: #888888;
             padding: 50px;
+
+            overflow: hidden;
         }
 
         .console-screen{
             position: relative;
             background-color: #ffffff;
-            height:300px;
+            height:250px;
             border: 1px solid grey;
+
+            overflow: hidden;
         }
 
         .button-placement{
             position: relative;
-
-
         }
 
         .gB-font{
@@ -155,35 +158,12 @@
 
         .gB-shape{
             border-radius: 100%;
-            height: 150px;
-            width:150px;
+            height: 100px;
+            width:100px;
             box-shadow: 5px 5px 2px #888888;
             position: relative;
-            left: 50%;
+            left: 55%;
             top: 100px;
-        }
-
-        .gB-navigation-top{
-            height: 50px;
-            width: 200px;
-            /* Rotate div */
-            -ms-transform: rotate(90deg); /* IE 9 */
-            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-            transform: rotate(90deg);
-            position: absolute;
-            top: 150px;
-            left: 30px;
-            border:none;
-            box-shadow: 5px 5px 2px #888888;
-        }
-
-        .gB-navigation-bottom{
-            height: 50px;
-            width: 200px;
-            position: absolute;
-            top: 150px;
-            left: 30px;
-            border:none;
         }
 
         .gB-label{
@@ -193,11 +173,35 @@
             font-size: 24px;
         }
 
+        .gB-navigation-top{
+            height: 50px;
+            width: 150px;
+            /* Rotate div */
+            -ms-transform: rotate(90deg); /* IE 9 */
+            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+            transform: rotate(90deg);
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            border:none;
+            box-shadow: 5px 5px 2px #888888;
+        }
+
+        .gB-navigation-bottom{
+            height: 50px;
+            width: 150px;
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            border:none;
+        }
+
         .gB-speakers{
             position: absolute;
             left: 85%;
-            top: 800px;
-            font-size: 45px;
+            top: 650px;
+            font-size: 30px;
+
             /* Rotate div */
             -ms-transform: rotate(120deg); /* IE 9 */
             -webkit-transform: rotate(120deg); /* Chrome, Safari, Opera */
@@ -208,14 +212,14 @@
             font-family: 'Press Start 2P', cursive;
             font-size: 24px;
             position: relative;
-            top: 50px;
+            top: 30px;
             left: 20px;
         }
-        
+
 
         /*---------- GAMEBOY SCREENS - CONSOLE ------------------*/
         .screen-1 {
-            height:300px;
+            height:250px;
             font-family: 'Press Start 2P', cursive;
             background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
             background: rgba(204, 204, 204, 0.5);
@@ -224,7 +228,7 @@
         }
 
         .screen-2{
-            height:300px;
+            height:250px;
             font-family: 'Press Start 2P', cursive;
             background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
             background: rgba(204, 204, 204, 0.5);
@@ -233,7 +237,7 @@
         }
 
         .screen-3{
-            height:300px;
+            height:250px;
             font-family: 'Press Start 2P', cursive;
             background: rgb(181, 227, 134); /* Fallback for older browsers without RGBA-support */
             position: relative;
@@ -241,7 +245,7 @@
         }
 
         .screen-4{
-            height:300px;
+            height:250px;
             font-family: 'Press Start 2P', cursive;
             background: rgb(197, 144, 0); /* Fallback for older browsers without RGBA-support */
             position: relative;
@@ -249,12 +253,22 @@
         }
 
         .screen-5{
-            height:300px;
+            height:250px;
             font-family: 'Press Start 2P', cursive;
-            background: rgb(164, 181, 168) /* Fallback for older browsers without RGBA-support */
+            background: rgb(164, 181, 168); /* Fallback for older browsers without RGBA-support */
             position: relative;
             bottom: 20px;
         }
+
+        /*---------------- HIDE THE GAME BOY BELOW A CERTAIN SCREEN SIZE ------------------ */
+        @media only screen and (max-width: 1026px) {
+            .console-out {
+                display: none;
+            }
+        }
+
+
+        /*  ----- HIDE GAMEBOY AND SHOW NORMAL DIVS INSTEAD ------ */
 
 
     </style>
@@ -463,9 +477,6 @@
 </div>
 
 
-
-
-
 <div class="technical_skills container-fluid">
     <div class="console-out">
         <div class="console-in">
@@ -507,11 +518,11 @@
         </div>
 
         <div class="button-labels">
-            <p class="gB-font gB-label"> A &nbsp; &nbsp; B </p>
+            <p class="gB-font gB-label"> A &nbsp; B </p>
         </div>
 
         <div class="gB-speakers">
-            ||||||||||
+            ||||||
         </div>
     </div>
 
@@ -554,10 +565,14 @@
 
 
 <div class="footer">
-    <footer>
-        <p>Create a small navigation bar here</p>
-        <p>Mention your name and github and linkedin link</p>
-    </footer>
+    <div class="navigation">
+        <nav class="navigation-content">
+            <a href="#something">PROJECTS</a>
+            <a href="#something">TECHNICAL SKILLS</a>
+            <a href="#something">EDUCATION</a>
+            <a href="#something">RESUME</a>
+        </nav>
+    </div>
 </div>
 
 
