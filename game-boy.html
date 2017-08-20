@@ -58,41 +58,12 @@
             padding: 30px;
             display: inline-block;
         }
-        
-        .projects{
-            background-image: url("sky.jpg");
 
-        }
-
-
-        .P1{
-            height: 200px;
-            font-family: 'Press Start 2P', cursive;
-
-
-        }
-
-        .front{
-            text-align: center;
-            background-color: #fff000;
-            box-shadow: 10px 10px 5px #888888;
-            border:1px solid black;
-        }
-
-        .back{
-            text-align: center;
-            background-color: black;
-            color: #ffffff;
-            box-shadow: 10px 10px 5px #888888;
-        }
-
-        .education{
-            padding:20px;
-            background-image: url("contra.jpg");
-        }
 
         .technical_skills{
-            background-image: url("street_fighter.jpg");
+            background-image: url("sky.jpg");
+            margin: 0;
+            padding:0;
         }
 
         .b-font{
@@ -105,6 +76,7 @@
             width:150px;
             box-shadow: 5px 5px 2px #888888;
         }
+
 
         /*------------------- GAME BOY CSS STARTS ----------------------------*/
 
@@ -211,7 +183,6 @@
             top: 50px;
             left: 20px;
         }
-        
 
         /*---------- GAMEBOY SCREENS - CONSOLE ------------------*/
         .screen-1 {
@@ -257,6 +228,13 @@
         }
 
 
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -282,191 +260,8 @@
 
 
 
-<!-- PROJECTS -->
-<div class="projects container-fluid">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-2 heading"><p>Projects</p></div>
-    </div>
-
-    <!-- Project 1-->
-    <div class="row">
-        <div class="col-md-4 col-md-offset-2 ">
-            <div class="P1" id="card">
-                <div class="front">
-                    <h3>Luhn Algorithm </h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-
-        <!-- project 2 -->
-        <div class="col-sm-4 col-md-offset-6">
-            <div class="P1" id="card2">
-                <div class="front">
-                    <h3>Medicine Tracker </h3>
-                </div>
-
-                <div class="back">
-                    <p>Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card2").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-    </div>
-
-
-
-    <div class="row">
-        <!-- project 3 -->
-        <div class="col-md-4 col-md-offset-2">
-            <div class="P1" id="card3">
-                <div class="front">
-                    <h3>Car-Inventory System</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card3").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-        <div class="col-md-4 col-md-offset-6">
-            <!-- project 3 -->
-            <div class="P1" id="card4">
-                <div class="front">
-                    <h3>Game of Pig</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card4").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-    </div>
-</div>
-
-
-<!-- Education and Work Experience -->
-
-<div class="education container-fluid">
-    <div class="row">
-
-        <div class="col-md-6">
-            <div class="P1" id="card5">
-                <div class="front">
-                    <h3>Brampton Centennial School</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card5").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-        <div class="col-md-6">
-            <button type="button" class="btn btn-danger b-font b-shape">Press me!</button>
-        </div>
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-6">
-            <button type="button" class="btn btn-danger b-font b-shape">Press me!</button>
-        </div>
-
-        <div class="col-md-6 ">
-            <div class="P1" id="card6">
-                <div class="front">
-                    <h3>University of Guelph</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card6").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="P1" id="card7">
-                <div class="front">
-                    <h3>Inbox Marketer</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card7").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-        <div class="col-md-6">
-            <button type="button" class="btn btn-danger b-font b-shape">Press me!</button>
-        </div>
-    </div>
-</div>
-
-
-
-
-
 <div class="technical_skills container-fluid">
+
     <div class="console-out">
         <div class="console-in">
             <div class = "console-screen">
@@ -516,6 +311,7 @@
     </div>
 
 </div>
+
 
 <script>
     $(document).ready(function(){
