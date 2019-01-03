@@ -5,8 +5,8 @@
 	width: 100%;
 	border: 2px solid black;
 	position: fixed;
-	top: 0;
 	overflow: hidden;
+	z-index: 1;
 }
 
 .navigation-content{
@@ -38,6 +38,7 @@
 
 .P1{
 	height: 150px;
+	margin: 10px;
 }
 
 .front{
@@ -81,3 +82,160 @@
 	width:80px;
 	box-shadow: 5px 5px 2px #888888;
 }
+
+
+ /*------------------- GAME BOY CSS STARTS ----------------------------*/
+
+    .console-out{
+        background-color: #d3d3d3;
+        border-bottom-right-radius: 60px;
+        border: 2px solid black;
+        left: 20%;
+        height: 700px;
+        width: 700px;
+        position: relative;
+        box-shadow: 20px 20px 2px #888888;
+        overflow: hidden;
+    }
+
+    .console-in{
+        position: relative;
+        border: 1px solid grey;
+        border-top-right-radius: 25px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius:25%;
+        border-bottom-right-radius:25%;
+        top: 30px;
+        width: 80%;
+        height: 400px;
+        left: 10%;
+        background-color: #888888;
+        padding: 50px;
+        overflow: hidden;
+    }
+
+    .console-screen{
+        position: relative;
+        background-color: #ffffff;
+        height:250px;
+        border: 2px solid grey;
+
+        overflow: hidden;
+    }
+
+    .button-placement{
+        position: relative;
+    }
+
+    .gB-font{
+
+    }
+
+    .gB-shape{
+        border-radius: 100%;
+        height: 100px;
+        width:100px;
+        box-shadow: 5px 5px 2px #888888;
+        position: relative;
+        left: 55%;
+        top: 100px;
+    }
+
+    .gB-label{
+        position: relative;
+        left: 60%;
+        top: 120px;
+        font-size: 24px;
+    }
+
+    .gB-navigation-top{
+        height: 50px;
+        width: 150px;
+        /* Rotate div */
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        border:none;
+        box-shadow: 5px 5px 2px #888888;
+    }
+
+    .gB-navigation-bottom{
+        height: 50px;
+        width: 150px;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        border:none;
+    }
+
+    .gB-speakers{
+        position: absolute;
+        left: 85%;
+        top: 650px;
+        font-size: 30px;
+
+        /* Rotate div */
+        -ms-transform: rotate(120deg); /* IE 9 */
+        -webkit-transform: rotate(120deg); /* Chrome, Safari, Opera */
+        transform: rotate(120deg);
+    }
+
+    .gB-logo{
+        font-size: 24px;
+        position: relative;
+        top: 30px;
+        left: 20px;
+    }
+
+
+    /*---------- GAMEBOY SCREENS - CONSOLE ------------------*/
+    .screen-1 {
+        height:250px;
+        background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+        background: rgba(204, 204, 204, 0.5);
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-2{
+        height:250px;
+        background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+        background: rgba(204, 204, 204, 0.5);
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-3{
+        height:250px;
+        background: rgb(181, 227, 134); /* Fallback for older browsers without RGBA-support */
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-4{
+        height:250px;
+        background: rgb(197, 144, 0); /* Fallback for older browsers without RGBA-support */
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-5{
+        height:250px;
+        background: rgb(164, 181, 168); /* Fallback for older browsers without RGBA-support */
+        position: relative;
+        bottom: 20px;
+    }
+
+    /*---------------- HIDE THE GAME BOY BELOW A CERTAIN SCREEN SIZE ------------------ */
+    @media only screen and (max-width: 1026px) {
+        .console-out {
+            display: none;
+        }
+    }
+
+
+    /*  ----- HIDE GAMEBOY AND SHOW NORMAL DIVS INSTEAD ------ */
