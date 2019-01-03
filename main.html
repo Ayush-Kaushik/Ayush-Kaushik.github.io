@@ -14,557 +14,207 @@
     <script src="/javascripts/anime.min.js"></script>
     <script src="/javascripts/lazysizes.min.js"></script>
     <script src="/javascripts/scripts.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 
     <!-- CSS stylesheets -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <!-- for navigation members -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
+    <!-- for navigation members -->
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-        <!-- for card flipping -->
+    <!-- for card flipping -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
-
-
-
-
+    <link rel="stylesheet" href="style.css"/>
     <style>
 
-        body,html {
-            margin:0;
-            padding:0;
+    body,html {
+        margin:0;
+        padding:0;
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    
+
+    /*------------------- GAME BOY CSS STARTS ----------------------------*/
+
+    .console-out{
+        background-color: #d3d3d3;
+        border-bottom-right-radius: 60px;
+        border: 1px solid black;
+        position: relative;
+        left: 20%;
+        height: 750px;
+        width: 750px;
+        position: relative;
+        box-shadow: 20px 20px 2px #888888;
+
+        overflow: hidden;
+    }
+
+    .console-in{
+        position: relative;
+        border: 1px solid grey;
+        border-top-right-radius: 25px;
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius:25%;
+        border-bottom-right-radius:25%;
+        top: 30px;
+        width: 80%;
+        height: 400px;
+        left: 10%;
+        background-color: #888888;
+        padding: 50px;
+
+        overflow: hidden;
+    }
+
+    .console-screen{
+        position: relative;
+        background-color: #ffffff;
+        height:250px;
+        border: 1px solid grey;
+
+        overflow: hidden;
+    }
+
+    .button-placement{
+        position: relative;
+    }
+
+    .gB-font{
+        font-family: 'Press Start 2P', cursive;
+    }
+
+    .gB-shape{
+        border-radius: 100%;
+        height: 100px;
+        width:100px;
+        box-shadow: 5px 5px 2px #888888;
+        position: relative;
+        left: 55%;
+        top: 100px;
+    }
+
+    .gB-label{
+        position: relative;
+        left: 60%;
+        top: 120px;
+        font-size: 24px;
+    }
+
+    .gB-navigation-top{
+        height: 50px;
+        width: 150px;
+        /* Rotate div */
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        border:none;
+        box-shadow: 5px 5px 2px #888888;
+    }
+
+    .gB-navigation-bottom{
+        height: 50px;
+        width: 150px;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        border:none;
+    }
+
+    .gB-speakers{
+        position: absolute;
+        left: 85%;
+        top: 650px;
+        font-size: 30px;
+
+        /* Rotate div */
+        -ms-transform: rotate(120deg); /* IE 9 */
+        -webkit-transform: rotate(120deg); /* Chrome, Safari, Opera */
+        transform: rotate(120deg);
+    }
+
+    .gB-logo{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 24px;
+        position: relative;
+        top: 30px;
+        left: 20px;
+    }
+
+
+    /*---------- GAMEBOY SCREENS - CONSOLE ------------------*/
+    .screen-1 {
+        height:250px;
+        font-family: 'Press Start 2P', cursive;
+        background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+        background: rgba(204, 204, 204, 0.5);
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-2{
+        height:250px;
+        font-family: 'Press Start 2P', cursive;
+        background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+        background: rgba(204, 204, 204, 0.5);
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-3{
+        height:250px;
+        font-family: 'Press Start 2P', cursive;
+        background: rgb(181, 227, 134); /* Fallback for older browsers without RGBA-support */
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-4{
+        height:250px;
+        font-family: 'Press Start 2P', cursive;
+        background: rgb(197, 144, 0); /* Fallback for older browsers without RGBA-support */
+        position: relative;
+        bottom: 20px;
+    }
+
+    .screen-5{
+        height:250px;
+        font-family: 'Press Start 2P', cursive;
+        background: rgb(164, 181, 168); /* Fallback for older browsers without RGBA-support */
+        position: relative;
+        bottom: 20px;
+    }
+
+    /*---------------- HIDE THE GAME BOY BELOW A CERTAIN SCREEN SIZE ------------------ */
+    @media only screen and (max-width: 1026px) {
+        .console-out {
+            display: none;
         }
-
-        .navigation{
-            background-color: #fff000;
-            height: 50%;
-            padding: 0;
-            width: 100%;
-        }
-
-        .navigation-content{
-            padding: 20px;
-            box-shadow: 10px 10px 5px #888888;
-        }
-
-        .navigation-content > a{
-            color: #000000;
-            font-weight: 100;
-            font-family: 'Press Start 2P', cursive;
-            text-decoration:  none;
-            font-size: 24px;
-            padding: 30px;
-            display: inline-block;
-        }
-        
-        .projects{
-            background-image: url("sky.jpg");
-            background-size: 100%;
-        }
-
-        .P1{
-            height: 200px;
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        .front{
-            text-align: center;
-            background-color: #fff000;
-            box-shadow: 10px 10px 5px #888888;
-            border:1px solid black;
-        }
-
-        .back{
-            text-align: center;
-            background-color: black;
-            color: #ffffff;
-            box-shadow: 10px 10px 5px #888888;
-        }
-
-        .education{
-            width: 100%;
-            padding:20px;
-            background-image: url("contra.jpg");
-        }
-
-        .technical_skills{
-            width: 100%;
-            background-image: url("street_fighter.jpg");
-        }
-
-        .b-font{
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        .b-shape{
-            border-radius: 100%;
-            height: 150px;
-            width:150px;
-            box-shadow: 5px 5px 2px #888888;
-        }
-
-        /*------------------- GAME BOY CSS STARTS ----------------------------*/
-
-        .console-out{
-            background-color: #d3d3d3;
-            border-bottom-right-radius: 60px;
-            border: 1px solid black;
-            position: relative;
-            left: 20%;
-            height: 750px;
-            width: 750px;
-            position: relative;
-            box-shadow: 20px 20px 2px #888888;
-
-            overflow: hidden;
-        }
-
-        .console-in{
-            position: relative;
-            border: 1px solid grey;
-            border-top-right-radius: 25px;
-            border-top-right-radius: 25px;
-            border-top-left-radius: 25px;
-            border-bottom-left-radius:25%;
-            border-bottom-right-radius:25%;
-            top: 30px;
-            width: 80%;
-            height: 400px;
-            left: 10%;
-            background-color: #888888;
-            padding: 50px;
-
-            overflow: hidden;
-        }
-
-        .console-screen{
-            position: relative;
-            background-color: #ffffff;
-            height:250px;
-            border: 1px solid grey;
-
-            overflow: hidden;
-        }
-
-        .button-placement{
-            position: relative;
-        }
-
-        .gB-font{
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        .gB-shape{
-            border-radius: 100%;
-            height: 100px;
-            width:100px;
-            box-shadow: 5px 5px 2px #888888;
-            position: relative;
-            left: 55%;
-            top: 100px;
-        }
-
-        .gB-label{
-            position: relative;
-            left: 60%;
-            top: 120px;
-            font-size: 24px;
-        }
-
-        .gB-navigation-top{
-            height: 50px;
-            width: 150px;
-            /* Rotate div */
-            -ms-transform: rotate(90deg); /* IE 9 */
-            -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-            transform: rotate(90deg);
-            position: absolute;
-            top: 150px;
-            left: 100px;
-            border:none;
-            box-shadow: 5px 5px 2px #888888;
-        }
-
-        .gB-navigation-bottom{
-            height: 50px;
-            width: 150px;
-            position: absolute;
-            top: 150px;
-            left: 100px;
-            border:none;
-        }
-
-        .gB-speakers{
-            position: absolute;
-            left: 85%;
-            top: 650px;
-            font-size: 30px;
-
-            /* Rotate div */
-            -ms-transform: rotate(120deg); /* IE 9 */
-            -webkit-transform: rotate(120deg); /* Chrome, Safari, Opera */
-            transform: rotate(120deg);
-        }
-
-        .gB-logo{
-            font-family: 'Press Start 2P', cursive;
-            font-size: 24px;
-            position: relative;
-            top: 30px;
-            left: 20px;
-        }
+    }
 
 
-        /*---------- GAMEBOY SCREENS - CONSOLE ------------------*/
-        .screen-1 {
-            height:250px;
-            font-family: 'Press Start 2P', cursive;
-            background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
-            background: rgba(204, 204, 204, 0.5);
-            position: relative;
-            bottom: 20px;
-        }
-
-        .screen-2{
-            height:250px;
-            font-family: 'Press Start 2P', cursive;
-            background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
-            background: rgba(204, 204, 204, 0.5);
-            position: relative;
-            bottom: 20px;
-        }
-
-        .screen-3{
-            height:250px;
-            font-family: 'Press Start 2P', cursive;
-            background: rgb(181, 227, 134); /* Fallback for older browsers without RGBA-support */
-            position: relative;
-            bottom: 20px;
-        }
-
-        .screen-4{
-            height:250px;
-            font-family: 'Press Start 2P', cursive;
-            background: rgb(197, 144, 0); /* Fallback for older browsers without RGBA-support */
-            position: relative;
-            bottom: 20px;
-        }
-
-        .screen-5{
-            height:250px;
-            font-family: 'Press Start 2P', cursive;
-            background: rgb(164, 181, 168); /* Fallback for older browsers without RGBA-support */
-            position: relative;
-            bottom: 20px;
-        }
-
-        /*---------------- HIDE THE GAME BOY BELOW A CERTAIN SCREEN SIZE ------------------ */
-        @media only screen and (max-width: 1026px) {
-            .console-out {
-                display: none;
-            }
-        }
-
-
-        /*  ----- HIDE GAMEBOY AND SHOW NORMAL DIVS INSTEAD ------ */
-
-
-    </style>
+    /*  ----- HIDE GAMEBOY AND SHOW NORMAL DIVS INSTEAD ------ */
+</style>
 </head>
 <body>
 
-<!-- When user leaves the browser -->
-<script>
-    window.onblur = function() {
-        document.title = "Come Back Soon!";
-    };
-    window.onfocus = function() {
-        document.title = "Portfolio | Ayush Kaushik";
-    };
-</script>
+    <!-- When user leaves the browser -->
+    <script>
+        window.onblur = function() {
+            document.title = "Come Back Soon!";
+        };
+        window.onfocus = function() {
+            document.title = "Portfolio | Ayush Kaushik";
+        };
+    </script>
 
-<div class="navigation">
-    <nav class="navigation-content">
-        <a href="#something">PROJECTS</a>
-        <a href="#something">TECHNICAL SKILLS</a>
-        <a href="#something">EDUCATION</a>
-        <a href="#something">RESUME</a>
-    </nav>
-</div>
-
-
-
-<!-- PROJECTS -->
-<div class="projects container-fluid">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-2 heading"><p>Projects</p></div>
-    </div>
-
-    <!-- Project 1-->
-    <div class="row">
-        <div class="col-md-4 col-md-offset-2 ">
-            <div class="P1" id="card">
-                <div class="front">
-                    <h3>Luhn Algorithm </h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-
-        <!-- project 2 -->
-        <div class="col-sm-4 col-md-offset-6">
-            <div class="P1" id="card2">
-                <div class="front">
-                    <h3>Medicine Tracker </h3>
-                </div>
-
-                <div class="back">
-                    <p>Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card2").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-    </div>
-
-
-
-    <div class="row">
-        <!-- project 3 -->
-        <div class="col-md-4 col-md-offset-2">
-            <div class="P1" id="card3">
-                <div class="front">
-                    <h3>Car-Inventory System</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card3").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-        <div class="col-md-4 col-md-offset-6">
-            <!-- project 3 -->
-            <div class="P1" id="card4">
-                <div class="front">
-                    <h3>Game of Pig</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                    <p>Git-hub link</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card4").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-    </div>
-</div>
-
-
-<!-- Education and Work Experience -->
-
-<div class="education container-fluid">
-    <div class="row">
-
-        <div class="col-md-6">
-            <div class="P1" id="card5">
-                <div class="front">
-                    <h3>Brampton Centennial School</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card5").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-        <div class="col-md-6">
-            <button type="button" class="btn btn-danger b-font b-shape">Press me!</button>
-        </div>
-    </div>
-
-    <div class="row">
-
-        <div class="col-md-6">
-            <button type="button" class="btn btn-danger b-font b-shape">Press me!</button>
-        </div>
-
-        <div class="col-md-6 ">
-            <div class="P1" id="card6">
-                <div class="front">
-                    <h3>University of Guelph</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card6").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="P1" id="card7">
-                <div class="front">
-                    <h3>Inbox Marketer</h3>
-                </div>
-
-                <div class="back">
-                    <p> Small Introduction</p>
-                </div>
-            </div>
-
-            <script>
-                $("#card7").flip({
-                    axis: 'x',
-                    trigger: 'hover'
-                });
-            </script>
-        </div>
-
-        <div class="col-md-6">
-            <button type="button" class="btn btn-danger b-font b-shape">Press me!</button>
-        </div>
-    </div>
-</div>
-
-
-<div class="technical_skills container-fluid">
-    <div class="console-out">
-        <div class="console-in">
-            <div class = "console-screen">
-                <div class="screen-1">
-                    <h2>Welcome To Gameboy Uber-Advance</h2>
-                    <p> Click A/B button to switch between screens</p>
-                </div>
-                <div class="screen-2">
-                    <h2>Level 1: Programming Languages</h2>
-                    <p>A list of languages I have worked with</p>
-                </div>
-                <div class="screen-3">
-                    <h2>C</h2>
-                    <p>I have most extensive experience with C language.</p>
-                    <p>Some of my very first projects were made in C</p>
-                </div>
-                <div class="screen-4">
-                    <h2>Java</h2>
-                    <p>I created an inventory system with Swing and AWT library</p>
-                </div>
-                <div class="screen-5">
-                    <h2>PHP</h2>
-                    <p>I used Symfony framework to create a medicine tracker which keeps track of patient medication</p>
-                </div>
-            </div>
-
-            <div class="gB-logo">
-                GAMEBOY UBER-ADVANCE
-            </div>
-        </div>
-
-        <div class="button-placement">
-            <button type="button" class="btn btn-primary gB-navigation-top"></button>
-            <button type="button" class="btn btn-primary gB-navigation-bottom"></button>
-
-            <button type="button" class="btn btn-danger gB-shape" id="prev"></button>
-            <button type="button" class="btn btn-danger gB-shape" id="next"></button>
-        </div>
-
-        <div class="button-labels">
-            <p class="gB-font gB-label"> A &nbsp; B </p>
-        </div>
-
-        <div class="gB-speakers">
-            ||||||
-        </div>
-    </div>
-
-</div>
-
-<script>
-    $(document).ready(function(){
-        $(".console-screen div").each(function(e) {
-            if (e != 0)
-                $(this).hide();
-        });
-
-        $("#next").click(function(){
-            if ($(".console-screen div:visible").next().length != 0)
-                $(".console-screen div:visible").fadeOut(function(){
-                    $(this).next().fadeIn();
-                });
-            else {
-                $(".console-screen div:visible").fadeOut(function(){
-                    $(".console-screen div:first").fadeIn();
-                });
-            }
-            return false;
-        });
-
-        $("#prev").click(function(){
-            if ($(".console-screen div:visible").prev().length != 0)
-                $(".console-screen div:visible").fadeOut(function(){
-                    $(this).prev().fadeIn();
-                });
-            else {
-                $(".console-screen div:visible").fadeOut(function(){
-                    $(".console-screen div:last").fadeIn();
-                });
-            }
-            return false;
-        });
-    });
-</script>
-
-
-<div class="footer">
     <div class="navigation">
         <nav class="navigation-content">
             <a href="#something">PROJECTS</a>
@@ -573,7 +223,276 @@
             <a href="#something">RESUME</a>
         </nav>
     </div>
-</div>
+
+    <!-- PROJECTS -->
+    <div class="projects container-fluid">
+        <div class="row">
+            <div class="heading"><h2>Level 1: Projects</h2></div>
+        </div>
+
+        <!-- Project 1-->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="P1" id="card">
+                    <div class="front">
+                        <h4>Luhn Algorithm</h4>
+                    </div>
+
+                    <div class="back">
+                        <p>Small Introduction</p>
+                        <p>Git-hub link</p>
+                    </div>
+                </div>
+
+                <script>
+                    $("#card").flip({
+                        axis: 'x',
+                        trigger: 'hover'
+                    });
+                </script>
+            </div>
+
+            <!-- project 2 -->
+            <div class="col-md-3">
+                <div class="P1" id="card2">
+                    <div class="front">
+                        <h4>Medicine Tracker </h4>
+                    </div>
+
+                    <div class="back">
+                        <p>Small Introduction</p>
+                        <p>Git-hub link</p>
+                    </div>
+                </div>
+
+                <script>
+                    $("#card2").flip({
+                        axis: 'x',
+                        trigger: 'hover'
+                    });
+                </script>
+            </div>
+
+            <!-- project 3 -->
+            <div class="col-md-3">
+                <div class="P1" id="card3">
+                    <div class="front">
+                        <h4>Car-Inventory System</h4>
+                    </div>
+
+                    <div class="back">
+                        <p>Small Introduction</p>
+                        <p>Git-hub link</p>
+                    </div>
+                </div>
+
+                <script>
+                    $("#card3").flip({
+                        axis: 'x',
+                        trigger: 'hover'
+                    });
+                </script>
+            </div>
+
+            <!-- project 4 -->
+            <div class="col-md-3">
+                <div class="P1" id="card4">
+                    <div class="front">
+                        <h4>Game of Pig</h4>
+                    </div>
+
+                    <div class="back">
+                        <p>Small Introduction</p>
+                        <p>Git-hub link</p>
+                    </div>
+                </div>
+
+                <script>
+                    $("#card4").flip({
+                        axis: 'x',
+                        trigger: 'hover'
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Education and Work Experience -->
+    <div class="education container-fluid">
+        <div class="row">
+
+            <!-- Education 1 -->
+            <div class="col-md-6">
+                <div class="P1" id="card5">
+                    <div class="front">
+                        <h4>Brampton Centennial School</h4>
+                        <div type="button" class="btn btn-danger b-shape b-font"></div>
+                    </div>
+
+                    <div class="back">
+                        <p> Small Introduction</p>
+                        <div type="button" class="btn btn-danger b-shape b-font"></div>
+                    </div>
+                </div>
+
+                <script>
+                    $("#card5").flip({
+                        axis: 'y',
+                        trigger: 'click'
+                    });
+                </script>
+            </div>
+
+            <!-- Education 2 -->
+            <div class="col-md-6">
+                <div class="P1" id="card6">
+                    <div class="front">
+                        <h4>University of Guelph</h4>
+                        <div type="button" class="btn btn-danger b-font b-shape"></div>
+                    </div>
+
+                    <div class="back">
+                        <p>Small Introduction</p>
+                        <div type="button" class="btn btn-danger b-font b-shape"></div>
+                    </div>
+                </div>
+
+                <script>
+                    $("#card6").flip({
+                        axis: 'y',
+                        trigger: 'click'
+                    });
+                </script>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="P1" id="card7">
+                    <div class="front">
+                        <h3>Inbox Marketer</h3>
+                        <div type="button" class="btn btn-danger b-font b-shape"></div>
+                    </div>
+
+                    <div class="back">
+                        <p> Small Introduction</p>
+                        <div type="button" class="btn btn-danger b-font b-shape"></div>
+                    </div>
+                </div>
+
+                <script>
+                    $("#card7").flip({
+                        axis: 'x',
+                        trigger: 'click'
+                    });
+                </script>
+            </div>
+
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="technical_skills container-fluid">
+        <div class="console-out">
+            <div class="console-in">
+                <div class = "console-screen">
+                    <div class="screen-1">
+                        <h2>Welcome To Gameboy Uber-Advance</h2>
+                        <p> Click A/B button to switch between screens</p>
+                    </div>
+                    <div class="screen-2">
+                        <h2>Level 1: Programming Languages</h2>
+                        <p>A list of languages I have worked with</p>
+                    </div>
+                    <div class="screen-3">
+                        <h2>C</h2>
+                        <p>I have most extensive experience with C language.</p>
+                        <p>Some of my very first projects were made in C</p>
+                    </div>
+                    <div class="screen-4">
+                        <h2>Java</h2>
+                        <p>I created an inventory system with Swing and AWT library</p>
+                    </div>
+                    <div class="screen-5">
+                        <h2>PHP</h2>
+                        <p>I used Symfony framework to create a medicine tracker which keeps track of patient medication</p>
+                    </div>
+                </div>
+
+                <div class="gB-logo">
+                    GAMEBOY UBER-ADVANCE
+                </div>
+            </div>
+
+            <div class="button-placement">
+                <button type="button" class="btn btn-primary gB-navigation-top"></button>
+                <button type="button" class="btn btn-primary gB-navigation-bottom"></button>
+
+                <button type="button" class="btn btn-danger gB-shape" id="prev"></button>
+                <button type="button" class="btn btn-danger gB-shape" id="next"></button>
+            </div>
+
+            <div class="button-labels">
+                <p class="gB-font gB-label"> A &nbsp; B </p>
+            </div>
+
+            <div class="gB-speakers">
+                ||||||
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".console-screen div").each(function(e) {
+                if (e != 0)
+                    $(this).hide();
+            });
+
+            $("#next").click(function(){
+                if ($(".console-screen div:visible").next().length != 0)
+                    $(".console-screen div:visible").fadeOut(function(){
+                        $(this).next().fadeIn();
+                    });
+                else {
+                    $(".console-screen div:visible").fadeOut(function(){
+                        $(".console-screen div:first").fadeIn();
+                    });
+                }
+                return false;
+            });
+
+            $("#prev").click(function(){
+                if ($(".console-screen div:visible").prev().length != 0)
+                    $(".console-screen div:visible").fadeOut(function(){
+                        $(this).prev().fadeIn();
+                    });
+                else {
+                    $(".console-screen div:visible").fadeOut(function(){
+                        $(".console-screen div:last").fadeIn();
+                    });
+                }
+                return false;
+            });
+        });
+    </script>
+
+
+    <div class="footer">
+        <div class="navigation">
+            <nav class="navigation-content">
+                <a href="#something">PROJECTS</a>
+                <a href="#something">TECHNICAL SKILLS</a>
+                <a href="#something">EDUCATION</a>
+                <a href="#something">RESUME</a>
+            </nav>
+        </div>
+    </div>
 
 
 </body>

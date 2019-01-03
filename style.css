@@ -1,0 +1,83 @@
+/* NAVIGATION */
+
+.navigation {
+	background-color: #fff000;
+	width: 100%;
+	border: 2px solid black;
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+}
+
+.navigation-content{
+	text-align: center;
+}
+
+.navigation-content > a{
+	color: #000000;
+	font-weight: 100;
+	
+	text-decoration: none;
+	font-size: 20px;
+	padding: 20px;
+	display: inline-block;
+}
+
+.heading{
+	text-align: center;
+	color: red;
+	padding: 20px;
+}
+
+/*     PROJECTS      */
+.projects{
+	background-image: url("sky.jpg");
+	background-size: auto;
+	padding: 50px;
+}
+
+.P1{
+	height: 150px;
+}
+
+.front{
+	background-color: #fff000;
+	text-align: center;
+	border:2px solid black;
+}
+
+.front > h4{
+	color: black;
+}
+
+.back{
+	text-align: center;
+	background-color: black;
+	color: #ffffff;
+}
+
+/*  EDUCATION  */
+
+.education{
+	width: 100%;
+	padding:20px;
+	background-image: url("contra.jpg");
+}
+
+.technical_skills{
+	width: 100%;
+	background-image: url("street_fighter.jpg");
+}
+
+.b-font{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 15px;
+	text-align: center;
+}
+
+.b-shape{
+	border-radius: 100%;
+	height: 80px;
+	width:80px;
+	box-shadow: 5px 5px 2px #888888;
+}
