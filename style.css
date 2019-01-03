@@ -31,7 +31,7 @@
 
 /*     PROJECTS      */
 .projects{
-	background-image: url("sky.jpg");
+	background-image: url("./img/sky.jpg");
 	background-size: auto;
 	padding: 50px;
 }
@@ -62,16 +62,15 @@
 .education{
 	width: 100%;
 	padding:20px;
-	background-image: url("contra.jpg");
+	background-image: url("./img/contra.jpg");
 }
 
 .technical_skills{
 	width: 100%;
-	background-image: url("street_fighter.jpg");
+	background-image: url("./img/street_fighter.jpg");
 }
 
 .b-font{
-	font-family: 'Press Start 2P', cursive;
 	font-size: 15px;
 	text-align: center;
 }
@@ -152,6 +151,7 @@
     .gB-navigation-top{
         height: 50px;
         width: 150px;
+
         /* Rotate div */
         -ms-transform: rotate(90deg); /* IE 9 */
         -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
